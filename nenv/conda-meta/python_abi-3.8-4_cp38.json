@@ -1,0 +1,33 @@
+{
+  "build": "4_cp38",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [
+    "python 3.8.* *_cpython"
+  ],
+  "depends": [],
+  "extracted_package_dir": "C:\\Users\\Nikhil Singh\\anaconda3\\pkgs\\python_abi-3.8-4_cp38",
+  "files": [
+    ".nonadmin"
+  ],
+  "fn": "python_abi-3.8-4_cp38.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "C:\\Users\\Nikhil Singh\\anaconda3\\pkgs\\python_abi-3.8-4_cp38",
+    "type": 1
+  },
+  "md5": "b1059de1664cef9a785dda079a50f1ed",
+  "name": "python_abi",
+  "package_tarball_full_path": "C:\\Users\\Nikhil Singh\\anaconda3\\pkgs\\python_abi-3.8-4_cp38.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fa131149ca3b73aac06f839ee9525581517f50829eaa93fc0e8787b4797e4df0",
+  "size": 6751,
+  "subdir": "win-64",
+  "timestamp": 1695147671000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/python_abi-3.8-4_cp38.conda",
+  "version": "3.8"
+}

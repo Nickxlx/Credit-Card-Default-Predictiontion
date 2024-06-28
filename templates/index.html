@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        .alert-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h2 class="mb-4">Credit Card Fraud Detection</h2>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form action="/predict" method="POST" id="predictionForm">
+                    <div class="form-group">
+                        <label for="features"></label>
+                        <textarea class="form-control" id="features" name="features" required rows="4" placeholder="Enter 23 Feature Values (comma separated):"></textarea>
+                        <small class="form-text text-muted">Enter the values in the order of columns: ['LIMIT_BAL', 'SEX', 'EDUCATION', 'MARRIAGE', 'AGE', 'PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1', 'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6', 'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6']</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                </form>
+            </div>
+        </div>
+        <div id="predictionResult">
+            {% if prediction is not none %}
+                <div class="alert alert-info mt-4">
+                    <strong>Prediction:</strong> {{ prediction }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to clear prediction result on page reload
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear prediction result when the page is refreshed
+            if (window.performance) {
+                if (performance.navigation.type === 1) {
+                    document.getElementById('predictionResult').innerHTML = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
