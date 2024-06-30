@@ -47,7 +47,8 @@ The predictive model employed in this project is an XGBoost classifier. XGBoost 
 To run this project locally, you can clone the repository using the following command:
 
 ```bash
-git clone <repository_url>
+git clone [ Git link](https://github.com/Nickxlx/Credit-Card-Default-Predictiontion/tree/main)
+
 ```
 
 ## Create a new Conda environment
@@ -60,9 +61,9 @@ conda create --prefix venv python==3.8 -y
 conda activate ./nenv
 ```
 
-## Final Project Run
-
 Once you have successfully completed the steps above,
+
+## Final Project Run
 
 - Install the **requirements.txt** by running the following command
 
