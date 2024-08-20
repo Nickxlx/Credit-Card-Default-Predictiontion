@@ -1,0 +1,17 @@
+dill
+dnspython
+database-connect
+Flask
+imblearn
+ipykernel
+Werkzeug
+pandas 
+scikit-learn
+xgboost
+numpy
+pymongo
+matplotlib
+seaborn
+PyYAML
+boto3
+-e .
